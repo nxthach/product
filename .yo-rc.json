@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.nab"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "microservice",
+    "baseName": "product",
+    "packageName": "com.nab",
+    "packageFolder": "com/nab",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MWMzNjIwOTZmZWI0YmU1OGUxNDMyZGExYmM1ZDFhNWNjZGIzMjMzZDNhNmViNjIyNWVhNjlkZDczOTVjZDk1Zjc5MmY2NmU1MmU2MzgzNTU3YjFhMzBkOTU4YjJmNzM5NzNiODU2N2Y0YTQ0MTY2ZDcxYWRkZDk2NzhlMjUyNWQ=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1592281273011,
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
