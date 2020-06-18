@@ -1,0 +1,20 @@
+entity Product {
+	code String,
+    name String,
+    brand String,
+    color String,
+    defaultPrice BigDecimal 
+}
+
+entity PriceProduct {
+	startDate LocalDate,
+    endDate LocalDate,
+    price BigDecimal
+}
+
+
+relationship OneToMany {
+	Product to PriceProduct{product}
+}
+
+

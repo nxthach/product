@@ -1,0 +1,38 @@
+{
+    "name": "PriceProduct",
+    "fields": [
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "priceProduct",
+            "relationshipName": "product",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200616100800",
+    "entityTableName": "price_product",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "product",
+    "applications": "*",
+    "microserviceName": "product"
+}

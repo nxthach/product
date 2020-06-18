@@ -1,0 +1,45 @@
+{
+    "name": "Product",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "brand",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "color",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defaultPrice",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "priceProduct",
+            "otherEntityRelationshipName": "product",
+            "relationshipName": "priceProduct"
+        }
+    ],
+    "changelogDate": "20200616100700",
+    "entityTableName": "product",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "product",
+    "applications": "*",
+    "microserviceName": "product"
+}
