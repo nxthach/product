@@ -98,42 +98,20 @@ public class PriceProduct implements Serializable {
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) {
-//            return true;
-//        }
-//        if (!(o instanceof PriceProduct)) {
-//            return false;
-//        }
-//        return id != null && id.equals(((PriceProduct) o).id);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return 31;
-//    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof PriceProduct)) {
             return false;
         }
-        PriceProduct that = (PriceProduct) o;
-        return Objects.equal(id, that.id) &&
-            Objects.equal(startDate, that.startDate) &&
-            Objects.equal(endDate, that.endDate) &&
-            Objects.equal(price, that.price) &&
-            Objects.equal(product, that.product);
+        return id != null && id.equals(((PriceProduct) o).id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id, startDate, endDate, price, product);
+        return Objects.hashCode(id);
     }
 
     @Override

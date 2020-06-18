@@ -1,6 +1,5 @@
 package com.nab.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.Objects;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -14,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * A Product.
@@ -147,44 +148,20 @@ public class Product implements Serializable {
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) {
-//            return true;
-//        }
-//        if (!(o instanceof Product)) {
-//            return false;
-//        }
-//        return id != null && id.equals(((Product) o).id);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return 31;
-//    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Product)) {
             return false;
         }
-        Product product = (Product) o;
-        return Objects.equal(id, product.id) &&
-            Objects.equal(code, product.code) &&
-            Objects.equal(name, product.name) &&
-            Objects.equal(brand, product.brand) &&
-            Objects.equal(color, product.color) &&
-            Objects.equal(defaultPrice, product.defaultPrice) &&
-            Objects.equal(priceProducts, product.priceProducts);
+        return id != null && id.equals(((Product) o).id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id, code, name, brand, color, defaultPrice, priceProducts);
+        return Objects.hashCode(id);
     }
 
     @Override

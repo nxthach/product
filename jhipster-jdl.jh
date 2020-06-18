@@ -17,4 +17,8 @@ relationship OneToMany {
 	Product to PriceProduct{product}
 }
 
+// Set pagination options
+paginate Product with infinite-scroll
 
+// Set filter
+filter Product
